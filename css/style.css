@@ -1,0 +1,464 @@
+/*Estilos Generales*/
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+:root {
+    --color-principal:rgb(35, 44, 81);
+    --color-secundario: rgb(242, 95, 58);
+    --color-texto: rgb(143, 148, 167);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+body{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 16px;
+    /*no olvidar: !!!poner fondo*/
+}
+h1{
+    font-size: 2.4em;
+    color: rgb(29, 30, 37);
+    font-weight: 700;
+}
+h2{
+    font-size:2em;
+    color:var(--color-principal);
+    font-weight: 700;
+}
+h4{
+    color:var(--color-principal);
+}
+p{
+    color: var(--color-texto);
+    font-weight: 400;
+}
+button{
+    background-color:var(--color-secundario);
+    color:rgb(249,249,249);
+    font-weight: 700;
+    border-radius: 50px;
+    border:none;
+    width: 134px;
+    height: 44px;
+    
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/*i{
+    color: rgb(249, 249, 249);
+    font-size: 20px;
+    padding: 5px;
+}    mejor ponerlo en cada seccion*/
+input{
+    height: 44px;
+    border-radius: 50px;
+    border-style: none;
+    color: rgb(143, 148, 167);
+    padding-left: 1rem;
+}
+a{
+    text-decoration: none;
+}
+.botonBlanco{
+    background-color: rgb(249, 249, 249);
+    color: var(--color-secundario);
+}
+.botonBlanco:hover{
+    color: rgba(255, 128, 0, .45);/*pensarlo bien: mas opacidad al texto que al fondo*/
+    background-color: rgb(249, 249, 249);
+}
+a:hover{
+    color:rgb(143, 148, 167);
+}
+i:hover{
+    color:var(--color-secundario);
+}
+.hoverFooter:hover{
+    color:var(--color-secundario);
+}
+button:hover{
+    background-color: rgba(255,128,0,.40);
+}
+
+.botonNaranja{
+    box-shadow: none;
+}
+.botonNaranja:hover{
+    /*background-color: rgba(249,249,249,.78);*/
+    background-color: rgba(253, 142, 116, .97);
+    transition-duration: .3s;
+    transition-delay: .3s;
+}
+.valid-email{
+    color: rgb(255, 51, 51);
+    font-weight: 300;
+    font-size: 12px;
+    font-style: italic;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+
+/*---------------------------------------VERSIÓN DESKTOP-------------------------------*/
+
+@media(max-width:1440px){
+
+body{
+    background-image: url(../img/fondo.svg);
+    background-repeat: no-repeat;
+    background-size: 650px;
+    background-position-x: 650px; 
+    background-position-y: -50px;
+}
+
+/*Header*/
+.vectorHamburger{
+    display: none;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:60px 120px 60px;/*tener en cuenta estas medidas*/
+}
+header>nav>ul li a{
+    color:var(--color-principal);
+    font-size: 13px;
+    font-weight: 500;
+}
+header>nav>ul li{
+    display: inline-block;
+    padding: 20px;
+}
+
+/*Main Section 1: Gráfico - DESKTOP*/
+.mainSection1{
+    display: flex;
+    justify-content: space-between;
+    padding:0 120px 30px;
+}
+.mainSection1>div{
+    height:386px;
+    width:370px;
+    align-self: center;
+}
+.mainSection1>div p{
+    padding: 30px 0 40px;
+}
+    
+/*Main Section 2: Lista - DESKTOP*/
+.mainSection2{
+    display: flex;
+    justify-content: space-between;
+    padding:50px 120px 30px;
+}
+.mainSection2>div{
+    height:212px;
+    width: 350px;
+}
+.mainSection2>div p{
+    padding-top: 25px;
+}
+.mainSection2>ul li{
+    height: 158px;
+    width: 540px;
+}
+.unoLista::before{
+    content: "01";
+    background-color: var(--color-secundario);
+    color: rgb(249, 249, 249);
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 700;
+}
+.dosLista::before{
+    content: "02";
+    background-color: var(--color-secundario);
+    color: rgb(249, 249, 249);
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 700;
+}
+.tresLista::before{
+    content: "03";
+    background-color: var(--color-secundario);
+    color: rgb(249, 249, 249);
+    border-radius: 30px;
+    padding: 0.5rem 1.2rem;
+    font-weight: 700;
+}
+.mainSection2>ul>li>div{
+    display: flex;
+}
+.mainSection2>ul>li p{
+    padding-left: 80px;
+        }
+.mainSection2>ul>li>div h4{
+    padding: 6px 0 0 20px;            
+}
+        
+/*Main Section 3:Cards - DESKTOP*/
+.mainSection3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+.mainSection3>div>article{
+    text-align: center;
+    height: 219px;
+    width: 340px;
+    background-color: rgb(249,249,249);
+    border-radius: 20px;
+    position:relative;
+    margin: 40px;
+}
+.mainSection3>div{
+    display: flex;
+}
+.mainSection3>div>article img{
+    width:100px;
+    position: absolute;
+    top: -50px;
+    left: 125px;
+}
+.mainSection3 h2{
+    padding-bottom: 100px;
+}
+.mainSection3>div>article h4{
+    padding: 70px 0 20px;
+}
+.mainSection3>div>article p{
+    padding: 0 15px;
+}
+.mainSection3>div i{
+    display: none;   
+}
+        
+/*Footer Section 1: Naranja - DESKTOP*/
+
+.footerSection1{
+    background-color:var(--color-secundario);
+    height: 224px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:50px 120px 30px;
+    background-image: url(../img/bg-simplify-section-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footerSection1 h2{
+    color: rgb(249, 249, 249);
+}
+
+/*Footer Section 2: Final-Negro - DESKTOP*/
+.footerSection2{
+    background-color:rgb(29, 30, 37);
+    display: flex;
+    justify-content: space-between;
+    height: 247px;
+    padding:60px 120px 30px;
+}
+.footerSection2>div>nav>ul>li a{
+    color: rgb(249, 249, 249);
+    font-weight: 400;
+}
+.footerSection2>div>nav>ul>li{
+    padding-bottom: 15px;
+}
+i{
+    color: rgb(249, 249, 249);
+    font-size: 20px;
+    padding-left: 5px;
+}
+.copyrightFooter{
+    font-size: 0.8rem;
+    text-align: center;
+    
+}
+.footerSection2>div>form{
+    padding-bottom: 3.7rem;
+}
+input[type="email"]:invalid{
+    color: rgb(255, 51, 51);
+    border: 1px solid rgb(255, 51, 51);
+}
+input{
+    width:201px;
+}
+.footerSection2>div>form>button{
+    width: 63px;
+    margin-left: 0.3rem;
+}
+.navFooter{
+    display: flex;
+    display:flexbox;
+}
+.navFooter>nav{
+    padding: 0 80px 0 80px;
+}
+}
+
+/*---------------------------------VERSIÓN MOBILE*-----------------------------------*/
+
+@media(max-width:375px){
+
+body{
+    background-size: 500px;
+    background-position-x: 50px; 
+    background-position-y: -100px;
+}
+/*Header - MOBILE*/
+.vectorHamburger{
+    display: block;
+}
+header nav {
+    display: none;
+}
+header button{
+    display: none;
+}
+.vectorMenu{
+    display: block;
+}
+header{
+    padding:60px 25px 40px;
+}
+
+/*Main Section 1: Gráfico - MOBILE*/
+.mainSection1{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding:0 20px;/*cambiar*/
+}
+.mainSection1>img{
+    width: 90vw;
+}
+.mainSection1>div{
+    text-align: center;
+}
+.mainSection1>div>p{
+    padding: 20px 0 40px;
+}
+.mainSection1>div{
+    height:386px;
+    width:340px;
+}
+
+/*Main Section 2: Lista - MOBILE*/
+.unoLista, .dosLista, .tresLista {
+    background-color: rgba(255,128,0,.15);
+    border-radius: 30px;
+}
+.mainSection2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+.mainSection2>div{
+    height:60vw;
+    width: 90vw;
+    text-align: center;
+}
+.mainSection2>div p{
+    padding-top: 25px;
+    
+}
+.mainSection2>ul li{
+    height: 50vw;
+    width: 90vw;
+}
+.mainSection2>ul>li p{
+    padding: 0px;
+    padding-top: 10px;
+}
+.mainSection2>ul>li>div h4{
+    padding: 8px 0 0 10px;            
+}
+
+/*Main Section 3:Cards - MOBILE*/
+
+.mainSection3>div i{
+    display: block;   
+}.mainSection3>div i{
+    color: var(--color-secundario);
+    padding: 20px 5px 40px;
+    font-size: 10px;      
+}
+.cardOculta{
+    display: none;
+}
+.mainSection3 h2{
+    padding-bottom: 5rem;
+}
+
+/*Footer Section 1: Naranja - MOBILE*/
+.footerSection1{
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:50px 20px 30px;
+    background-image: url(../img/bg-simplify-section-mobile.svg);
+    background-size:contain;
+    background-repeat: no-repeat;
+    
+}
+.footerSection1 h2{
+    color: rgb(249, 249, 249);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/*Footer Section 2: Final-Negro - MOBILE*/
+
+.footerSection2{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 500px;
+    padding:25px 20px 30px;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerSection2>div>nav>ul>li{
+    padding-bottom: 15px;
+}
+.footerSection2>div>form{
+    padding-bottom: 2rem;/*cambiar fijarme abajo la lista*/
+}
+input{
+    width:250px;
+}
+.navFooter>nav{
+    padding: 0 40px 40px 33px;
+}
+.copyrightFooter{
+    padding: 22rem 0 0 3.6rem;
+    position: absolute;
+}
+.icoimgFooter{
+    display: flex;
+    flex-direction: column-reverse;
+}
+i{
+    font-size: 2rem;
+    padding-right: 1.5rem;
+}
+.footerSection2>div img{
+    width:60vw;
+    padding-left: 4rem;
+    padding-bottom: 4rem;
+}
+.valid-email{
+    display: none;
+}
+
+}
